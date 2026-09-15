@@ -1,0 +1,19 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+
+## Visual Studio
+.vs/
+.vscode/
+
+## Rider
+.idea/
+
+## Logs e temporários
+*.log
+
+## Banco de dados local (se usar SQLite/mdf local)
+*.mdf
+*.ldf
