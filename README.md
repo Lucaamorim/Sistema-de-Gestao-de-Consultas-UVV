@@ -8,7 +8,7 @@ Aplicação Web em **ASP.NET Core MVC (C#)** para gerenciamento de usuários e r
 ## Tecnologias
 - ASP.NET Core 8.0 (MVC)
 - Entity Framework Core 8 (Code First + Migrations)
-- SQL Server (LocalDB ou instância local/remota)
+- SQL Server
 - Autenticação por Cookie (`Microsoft.AspNetCore.Authentication.Cookies`)
 - Bootstrap 5
 
