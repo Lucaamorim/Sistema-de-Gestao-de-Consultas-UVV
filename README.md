@@ -29,13 +29,13 @@ SistemaGestaoConsultasUVV/
 
 ### 1. Pré-requisitos
 - [.NET 8 SDK](https://dotnet.microsoft.com/download)
-- SQL Server LocalDB (já vem com o Visual Studio) ou uma instância SQL Server acessível
+- SQL Server (LocalDB, Express ou Developer Edition)
 - (Opcional) Visual Studio 2022 ou VS Code
 
 ### 2. Clonar o repositório
 ```bash
-git clone https://github.com/Lucaamorim/Sistema-de-Gest-o-de-Consultas-UVV.git
-cd Sistema-de-Gest-o-de-Consultas-UVV/SistemaGestaoConsultasUVV
+git clone https://github.com/Lucaamorim/Sistema-de-Gestao-de-Consultas-UVV.git
+cd Sistema-de-Gestao-de-Consultas-UVV/SistemaGestaoConsultasUVV
 ```
 
 ### 3. Configurar a Connection String
@@ -43,11 +43,11 @@ No arquivo `appsettings.json`, ajuste a string de conexão conforme seu ambiente
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "Server=(localdb)\\mssqllocaldb;Database=SistemaGestaoConsultasUVV;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
+  "DefaultConnection": "Server=localhost;Database=SistemaGestaoConsultasUVV;Trusted_Connection=True;MultipleActiveResultSets=true;TrustServerCertificate=True"
 }
 ```
 
-Se estiver usando o SQL Server Express/instância nomeada, troque `(localdb)\mssqllocaldb` pelo nome do seu servidor (ex.: `.\SQLEXPRESS`).
+Se estiver usando o LocalDB, troque `Server=localhost` por `Server=(localdb)\\mssqllocaldb`. Se estiver usando uma instância nomeada (ex.: SQL Server Express), use algo como `Server=.\SQLEXPRESS`.
 
 ### 4. Restaurar pacotes
 ```bash
@@ -88,7 +88,7 @@ Acesse `https://localhost:<porta>` exibida no terminal (ex.: `https://localhost:
 - Cada usuário só visualiza/edita/exclui as próprias consultas (filtro por `UsuarioId` do usuário autenticado).
 
 ## Vídeo demonstrativo
-🎥 Link do vídeo (cadastro, login e registro de consulta em funcionamento): **[INSERIR LINK DO LOOM/YOUTUBE AQUI]**
+🎥 Link do vídeo (cadastro, login e registro de consulta em funcionamento): **https://youtu.be/UNLanqo1_Lo**
 
 ## Testando com Swagger/Postman
 Como este é um projeto MVC (Views + Controllers) e não uma Web API pura, o Swagger não é habilitado por padrão. Para testar fluxos isoladamente, recomenda-se usar o Postman apontando para as rotas dos controllers, ou testar diretamente pela interface web.
